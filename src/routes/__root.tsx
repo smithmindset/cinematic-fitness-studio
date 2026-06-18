@@ -77,19 +77,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "GO Fitness Centre — Train Beyond Limits | Lekki, Lagos" },
+      {
+        name: "description",
+        content:
+          "GO Fitness Centre in Lekki, Lagos. State-of-the-art equipment, expert coaches, strength, conditioning, boxing and group classes. Train beyond limits.",
+      },
+      { name: "author", content: "GO Fitness Centre" },
+      { property: "og:title", content: "GO Fitness Centre — Train Beyond Limits" },
+      {
+        property: "og:description",
+        content:
+          "Premier fitness centre in Ikate Elegushi, Lekki, Lagos.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
