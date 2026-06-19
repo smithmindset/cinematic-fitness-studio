@@ -205,9 +205,9 @@ export function Classes() {
 
 /* COACHES */
 const coaches = [
-  { img: trainer1, name: "Tobi Adebayo", role: "Head of Strength" },
-  { img: trainer2, name: "Amara Okeke", role: "Conditioning Lead" },
-  { img: trainer3, name: "Kayode Bello", role: "Boxing Coach" },
+  { img: trainer1, name: "Coach GO", role: "Lead Coach · Founder" },
+  { img: trainer2, name: "Coach GO", role: "Strength & Programming" },
+  { img: trainer3, name: "Coach Energy", role: "Cardio & HIIT Lead" },
 ];
 
 export function Coaches() {
