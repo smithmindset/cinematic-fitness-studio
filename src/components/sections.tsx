@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Dumbbell, Flame, HeartPulse, Zap, MapPin, Phone, Mail, Clock, Check } from "lucide-react";
 import hero from "@/assets/hero-deadlift.jpg";
+import heroVideo from "@/assets/hero-bg.mp4.asset.json";
 import classStrength from "@/assets/class-strength.jpg";
 import classBoxing from "@/assets/class-boxing.jpg";
 import classCardio from "@/assets/class-cardio.jpg";
@@ -14,15 +15,21 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden noise">
       <div className="absolute inset-0">
-        <img
-          src={hero}
-          alt="Athlete preparing a deadlift in dramatic red lighting at GO Fitness Centre"
-          width={1920}
-          height={1280}
-          className="h-full w-full object-cover opacity-70"
+        <video
+          src={heroVideo.url}
+          poster={hero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="h-full w-full object-cover scale-105 saturate-[0.85] contrast-125 brightness-[0.75]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-ember)" }} />
+        {/* Cinematic letterbox + color grade */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(var(--background)/0.55)_75%,hsl(var(--background))_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/30" />
+        <div className="absolute inset-0 mix-blend-overlay" style={{ background: "var(--gradient-ember)", opacity: 0.55 }} />
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/90 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-24 pt-40 md:px-10 md:pb-32">
