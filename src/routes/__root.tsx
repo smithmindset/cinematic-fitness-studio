@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "GO Fitness Centre in Lekki, Lagos. State-of-the-art equipment, expert coaches, strength, conditioning, boxing and group classes. Train beyond limits.",
       },
       { name: "author", content: "GO Fitness Centre" },
-      { property: "og:title", content: "GO Fitness Centre — Train Beyond Limits" },
+      { property: "og:title", content: "GO Fitness Centre — Train Beyond Limits | Lekki, Lagos" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "GO Fitness Centre — Train Beyond Limits | Lekki, Lagos" },
+      { name: "description", content: "Cinematic Fitness Studio builds professional, cinematic websites for gyms, showcasing their brand and services." },
+      { property: "og:description", content: "Cinematic Fitness Studio builds professional, cinematic websites for gyms, showcasing their brand and services." },
+      { name: "twitter:description", content: "Cinematic Fitness Studio builds professional, cinematic websites for gyms, showcasing their brand and services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/655a1340-6a1a-448f-bf7d-4d37256ff592/id-preview-87575f1f--ce770b98-3aac-445c-8f16-5fbbe9ae8365.lovable.app-1782223100929.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/655a1340-6a1a-448f-bf7d-4d37256ff592/id-preview-87575f1f--ce770b98-3aac-445c-8f16-5fbbe9ae8365.lovable.app-1782223100929.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
