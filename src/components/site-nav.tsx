@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/go-fitness-logo-clean.png";
+import logo from "@/assets/go-fitness-logo.asset.json";
 
 const links = [
   { label: "About", href: "#about" },
@@ -32,7 +32,7 @@ export function SiteNav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="GO Fitness" loading="eager" width={1024} height={1024} className="h-10 w-10 object-contain" />
+          <img src={logo.url} alt="GO Fitness" className="h-10 w-10 rounded-sm" />
           <div className="leading-tight">
             <div className="font-display text-lg uppercase tracking-[0.18em] text-foreground">
               GO Fitness

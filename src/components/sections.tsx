@@ -2,18 +2,13 @@ import { motion } from "motion/react";
 import { ArrowRight, Dumbbell, Flame, HeartPulse, Zap, MapPin, Phone, Mail, Clock, Check } from "lucide-react";
 import hero from "@/assets/hero-deadlift.jpg";
 import heroVideo from "@/assets/hero-bg.mp4.asset.json";
-import classStrength from "@/assets/class-strength.jpg.asset.json";
-import classBoxing from "@/assets/class-boxing.jpg.asset.json";
-import classCardio from "@/assets/class-cardio.jpg.asset.json";
-import classHiit from "@/assets/class-hiit.jpg.asset.json";
+import classStrength from "@/assets/class-strength.jpg";
+import classBoxing from "@/assets/class-boxing.jpg";
+import classCardio from "@/assets/class-cardio.jpg";
+import classHiit from "@/assets/class-hiit.jpg";
 import trainer1 from "@/assets/trainer-1.jpg";
 import trainer2 from "@/assets/trainer-2.jpg";
-import trainer3 from "@/assets/trainer-3.jpg.asset.json";
-import gymFacade from "@/assets/gym-facade.jpg.asset.json";
-import communityGroup from "@/assets/community-group.jpg.asset.json";
-import coachStage from "@/assets/coach-stage.jpg.asset.json";
-import frontDesk from "@/assets/front-desk.jpg.asset.json";
-import healthWalk from "@/assets/health-walk.jpg.asset.json";
+import trainer3 from "@/assets/trainer-3.jpg";
 
 /* HERO */
 export function Hero() {
@@ -30,6 +25,7 @@ export function Hero() {
           preload="auto"
           className="h-full w-full object-cover scale-105 saturate-[0.85] contrast-125 brightness-[0.75]"
         />
+        {/* Cinematic letterbox + color grade */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(var(--background)/0.55)_75%,hsl(var(--background))_100%)]" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/30" />
         <div className="absolute inset-0 mix-blend-overlay" style={{ background: "var(--gradient-ember)", opacity: 0.55 }} />
@@ -106,19 +102,11 @@ export function Hero() {
 /* ABOUT */
 export function About() {
   const features = [
-    { icon: Dumbbell, t: "Performance Floor", d: "Strength stations, treadmills, spin bikes and open movement zones across the facility." },
-    { icon: Flame, t: "Group Energy", d: "Large-format classes, coached sessions and community events that keep the floor alive." },
-    { icon: HeartPulse, t: "Wellness Studio", d: "Recovery, stretch and mat-based sessions for mobility, breathwork and reset." },
-    { icon: Zap, t: "Real Community", d: "From transformation programmes to city fitness walks, the culture goes beyond the gym walls." },
+    { icon: Dumbbell, t: "Olympic Platforms", d: "Eleiko bars, calibrated plates, six dedicated lifting stations." },
+    { icon: Flame, t: "Combat Studio", d: "Pro-grade ring, heavy bags, padwork with certified coaches." },
+    { icon: HeartPulse, t: "Recovery Zone", d: "Sauna, ice bath, percussive therapy and stretch lab." },
+    { icon: Zap, t: "Performance Floor", d: "Sleds, turf, kettlebells and a 30m sprint track." },
   ];
-
-  const gallery = [
-    { img: gymFacade.url, alt: "GO Fitness Centre exterior in Lekki" },
-    { img: frontDesk.url, alt: "GO Fitness reception area with branded banner" },
-    { img: healthWalk.url, alt: "GO Fitness community wellness walk" },
-    { img: communityGroup.url, alt: "GO Fitness community group photo" },
-  ];
-
   return (
     <section id="about" className="relative py-32 md:py-44">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12 md:px-10">
@@ -129,27 +117,17 @@ export function About() {
               The Centre
             </div>
             <h2 className="font-display mt-6 text-5xl font-bold uppercase leading-[0.95] text-foreground md:text-6xl">
-              A real fitness community in <span className="text-primary">the heart of Lekki</span>.
+              A temple for those who refuse <span className="text-primary">average</span>.
             </h2>
           </div>
         </div>
         <div className="md:col-span-7 md:pt-6">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            GO Fitness Centre is built around authentic training culture — real coaches, real members, real transformation. From the main gym floor to group sessions and outdoor community events, every space is designed to keep people moving.
+            GO Fitness Centre isn't a gym. It's a stage. Twenty-thousand square feet of competition-grade equipment, dedicated boxing and combat studios, performance recovery zones, and coaches who've trained athletes from the Premier League to the Olympic floor.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            The experience blends strength, conditioning, cardio and recovery with the energy of a close-knit Lagos fitness community.
+            Built in the heart of Lekki, we train executives, athletes, and everyday warriors with the same standard — uncompromising.
           </p>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
-            {gallery.map((item) => (
-              <div key={item.alt} className="relative aspect-[4/3] overflow-hidden border border-border bg-card">
-                <img src={item.img} alt={item.alt} loading="lazy" className="h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/35 to-transparent" />
-              </div>
-            ))}
-          </div>
-
           <div className="mt-12 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
             {features.map(({ icon: Icon, t, d }) => (
               <div key={t} className="group bg-card p-8 transition-colors hover:bg-surface-2">
@@ -167,10 +145,10 @@ export function About() {
 
 /* CLASSES */
 const classes = [
-  { img: classStrength.url, tag: "01", title: "Strength Floor", desc: "A full equipment layout built for lifting, machine work and daily performance sessions." },
-  { img: classBoxing.url, tag: "02", title: "Recovery & Mobility", desc: "Guided mat sessions that support stretch work, reset and body recovery." },
-  { img: classCardio.url, tag: "03", title: "Women’s Fitness", desc: "High-energy class culture, coached group workouts and confidence-building sessions." },
-  { img: classHiit.url, tag: "04", title: "Conditioning Zone", desc: "Treadmills, turf, tyres and conditioning tools for relentless cardio and endurance." },
+  { img: classStrength, tag: "01", title: "Strength", desc: "Olympic lifting, powerlifting and structural strength programming." },
+  { img: classBoxing, tag: "02", title: "Boxing & Combat", desc: "Technique, padwork and sparring with championship coaches." },
+  { img: classCardio, tag: "03", title: "Conditioning", desc: "Curved treadmills, sleds and engine work for relentless cardio." },
+  { img: classHiit, tag: "04", title: "Group HIIT", desc: "60-minute coached intervals — kettlebells, intervals, intent." },
 ];
 
 export function Classes() {
@@ -185,12 +163,12 @@ export function Classes() {
               Programmes
             </div>
             <h2 className="font-display mt-6 max-w-2xl text-5xl font-bold uppercase leading-[0.95] text-foreground md:text-6xl">
-              Real sessions.<br />
-              <span className="text-primary">Real people.</span>
+              Four disciplines.<br />
+              <span className="text-primary">One standard.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            The site now reflects your real gym environment — actual spaces, actual sessions and actual community energy.
+            Every class is coached. Every coach is certified. Every session ends with you stronger than you walked in.
           </p>
         </div>
 
@@ -229,7 +207,7 @@ export function Classes() {
 const coaches = [
   { img: trainer1, name: "Coach GO", role: "Lead Coach · Founder" },
   { img: trainer2, name: "Coach GO", role: "Strength & Programming" },
-  { img: trainer3.url, name: "Coach Ada", role: "Member Experience Lead" },
+  { img: trainer3, name: "Coach Energy", role: "Cardio & HIIT Lead" },
 ];
 
 export function Coaches() {
@@ -248,7 +226,7 @@ export function Coaches() {
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {coaches.map((c, i) => (
             <motion.div
-              key={c.name + c.role}
+              key={c.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -256,7 +234,7 @@ export function Coaches() {
               className="group"
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-card">
-                <img src={c.img} alt={c.name} loading="lazy" className="h-full w-full object-cover transition-all duration-700 group-hover:scale-[1.03]" />
+                <img src={c.img} alt={c.name} loading="lazy" className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="font-display text-2xl uppercase tracking-tight text-foreground">{c.name}</div>
@@ -265,17 +243,6 @@ export function Coaches() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="relative aspect-[16/10] overflow-hidden border border-border bg-card">
-            <img src={coachStage.url} alt="Lead coach speaking at a branded event" loading="lazy" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/55 to-transparent" />
-          </div>
-          <div className="relative aspect-[16/10] overflow-hidden border border-border bg-card">
-            <img src={communityGroup.url} alt="GO Fitness members gathered outside together" loading="lazy" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/55 to-transparent" />
-          </div>
         </div>
       </div>
     </section>
